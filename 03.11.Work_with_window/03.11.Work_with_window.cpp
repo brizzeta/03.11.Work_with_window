@@ -1,4 +1,4 @@
-// 03.11.Work_with_window.cpp : Defines the entry point for the application.
+ï»¿// 03.11.Work_with_window.cpp : Defines the entry point for the application.
 //
 
 #include "framework.h"
@@ -117,15 +117,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     break;
     case WM_LBUTTONDOWN:
         if (LOWORD(lParam) > x && LOWORD(lParam) < xs && HIWORD(lParam) > y && HIWORD(lParam) < ys) {
-            wsprintf(str, TEXT("Íàæàòèå âíóòðè ïðÿìîóãîëüíèêà x = %d  y = %d"), LOWORD(lParam), HIWORD(lParam));
+            wsprintf(str, TEXT("ÐÐ°Ð¶Ð°Ñ‚Ð¸Ðµ Ð²Ð½ÑƒÑ‚Ñ€Ð¸ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° x = %d  y = %d"), LOWORD(lParam), HIWORD(lParam));
             SetWindowText(hWnd, str);
         }
         else if (LOWORD(lParam) > x && LOWORD(lParam) < xs && HIWORD(lParam) == y || LOWORD(lParam) > x && LOWORD(lParam) < xs && HIWORD(lParam) == ys || HIWORD(lParam) > x && HIWORD(lParam) < xs && LOWORD(lParam) == y || HIWORD(lParam) > x && HIWORD(lParam) < xs && LOWORD(lParam) == ys) {
-            wsprintf(str, TEXT("Íàæàòèå íà êîíòóð ïðÿìîóãîëüíèêà x = %d y = %d"), LOWORD(lParam), HIWORD(lParam));
+            wsprintf(str, TEXT("ÐÐ°Ð¶Ð°Ñ‚Ð¸Ðµ Ð½Ð° ÐºÐ¾Ð½Ñ‚ÑƒÑ€ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° x = %d y = %d"), LOWORD(lParam), HIWORD(lParam));
             SetWindowText(hWnd, str);
         }
         else {
-            wsprintf(str, TEXT("Íàæàòèå çà ïðÿìîóãîëüíèê x = %d y = %d"), LOWORD(lParam), HIWORD(lParam));
+            wsprintf(str, TEXT("ÐÐ°Ð¶Ð°Ñ‚Ð¸Ðµ Ð·Ð° Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº x = %d y = %d"), LOWORD(lParam), HIWORD(lParam));
             SetWindowText(hWnd, str);
         }
     case WM_KEYDOWN:
